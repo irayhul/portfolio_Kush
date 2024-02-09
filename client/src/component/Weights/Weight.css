@@ -1,0 +1,86 @@
+.weightWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 1vmax;
+  padding-bottom: 10vmax;
+  overflow-x: hidden;
+}
+
+/* Add media query for responsiveness */
+@media (max-width: 768px) {
+  .weightWrapper {
+    padding: 0;
+  }
+}
+
+/* Adjust h3 styles */
+.weightWrapper h3 {
+  text-align: center; /* Center the text */
+  margin-bottom: 20px; /* Add some space below the heading */
+}
+
+#columns {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+#columns figure {
+  background: #fefefe;
+  border: 2px solid #fcfcfc;
+  box-shadow: 0 1px 2px rgba(34, 25, 25, 0.4);
+  margin: 15px;
+  padding: 15px;
+  padding-bottom: 10px;
+  transition: opacity 0.4s ease-in-out;
+  width: calc(33.33% - 30px);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Adjust figure width for smaller screens */
+@media screen and (max-width: 750px) {
+  #columns figure {
+    width: calc(50% - 30px);
+  }
+}
+
+#columns figure img {
+  max-width: 100%;
+  height: auto;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 15px;
+  margin-bottom: 5px;
+}
+
+#columns figure figcaption {
+  font-size: 1.5rem;
+  color: #444;
+  line-height: 1.5;
+  font-family: Centra;
+  font-weight: bold;
+  text-align: center; /* Center the text */
+}
+
+.weightWrapper small {
+  font-size: 1rem;
+  float: right;
+  text-transform: uppercase;
+  color: #aaa;
+}
+
+.weightWrapper small a {
+  color: #666;
+  text-decoration: none;
+  transition: 0.4s color;
+}
+
+#columns:hover figure:not(:hover) {
+  opacity: 0.4;
+}
